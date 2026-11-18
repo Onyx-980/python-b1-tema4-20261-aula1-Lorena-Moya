@@ -44,8 +44,19 @@ Exemple:
 
 
 def count_fruits(fruits_list):
-    # Write here your code
-    pass
+    # hem de retornar un diccionari on cada clau sigui el nom d'una fruita 
+    # el seu valor ha de ser igual a la quantitat de vegades que apareix a la llista
+    # si la llista està buida, retornarem un diccionari buit
+    # fem servir un bucle per recórrer la llista i comptar les vegades que apareix cada fruita
+    # podem fer servir un diccionari per emmagatzemar les fruites i les seves quantitats
+    # si la fruita ja està al diccionari, incrementarem el seu valor en 1, si no, l'afegirem al diccionari amb valor 1
+    fruit_count = {}
+    for fruit in fruits_list:
+        if fruit in fruit_count:
+            fruit_count[fruit] += 1
+        else:
+            fruit_count[fruit] = 1
+    return fruit_count
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
