@@ -38,12 +38,19 @@ list_2 = [4, 5, 6, 7, 8]
 
 
 def find_intersection(list_1, list_2):
-    # Write here your code
-    pass
+    # Retorna una llista amb els elements que es troben en ambdues llistes
+    # si no hi ha elements en comú, retorna una llista buida
+    intersection = []
+    # Recorrem la primera llista i comprovem si cada element està present a la segona llista
+    for element in list_1:
+        # Evitem duplicats a la llista d'intersecció
+        if element in list_2 and element not in intersection:
+            intersection.append(element)
+    return intersection
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# print(find_intersection([1, 2, 3, 4], [3, 4, 5, 6]))
-# print(find_intersection(['apple', 'banana', 'orange'], ['banana', 'kiwi', 'apple']))
+#  print(find_intersection([1, 2, 3, 4], [3, 4, 5, 6]))
+#  print(find_intersection(['apple', 'banana', 'orange'], ['banana', 'kiwi', 'apple']))
