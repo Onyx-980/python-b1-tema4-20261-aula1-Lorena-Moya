@@ -37,8 +37,11 @@ Exemple:
 
 
 def descending_list_iterator(numbers_list):
-    # Write here your code
-    pass
+    # hem de retornar un iterador que generi els números de més gran a més petit
+    # Ordenem la llista de més gran a més petit (sorted() no modifica l'original
+    # i en retornem un iterador amb iter().
+    # Els duplicats es mantenen, i una llista buida dóna un iterador buit.
+    return iter(sorted(numbers_list, reverse=True))
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
