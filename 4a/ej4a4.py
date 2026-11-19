@@ -30,8 +30,11 @@ Enunciat:
 
 
 def add_elapsed_time(dictionary, key, value):
-    # Write here your code
-    pass
+    # Afegir el nou element al diccionari utilitzant la clau i el valor proporcionats
+    # Si la clau ja existeix al diccionari, reemplaçar el valor
+    # anterior pel nou valor. Retornar el diccionari actualitzat.
+    dictionary[key] = value
+    return dictionary
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
