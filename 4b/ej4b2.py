@@ -50,16 +50,20 @@ Exemple:
 
 
 def average_score_ram(scores_dict):
-    # Store the dictionary in RAM
-    # Write here your code
-    pass
+    # No guardem cap diccionari nou: només acumulem la suma de les qualificacions,
+    # així l'únic que ocupa memòria és la variable total.
+    total = 0
+    for score in scores_dict.values():
+        total += score
+    ram_average = total / len(scores_dict)
+    return ram_average
 
 
-def average_score_heap(scores_dict):
-    # Store the dictionary in Heap    
+def average_score_heap(scores_dict):  
     score_list = list(scores_dict.values())
-    # You should correct and overwrite something in the following line.
-    heap_average = sum(score_list) 
+    #  Creem una llista nova amb totes les qualificacions (ocupa memòria al heap)  
+    # després calculem la mitjana. 
+    heap_average = sum(score_list) / len(score_list)
     return heap_average
 
 
