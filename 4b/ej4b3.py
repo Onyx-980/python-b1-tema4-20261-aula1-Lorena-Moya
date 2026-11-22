@@ -82,8 +82,13 @@ def create_list(length_list):
     the second one created in Heap by reusing the first list.
     """
 
-    # Write here your code
-    pass
+   # Fem servir random per crear números aleatoris entre 0 i 100, i copy
+    # per crear al Heap una còpia de la llista creada a la RAM.
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+    ram_list = [random.randint(0, 100) for _ in range(length_list)]
+    heap_list = copy.deepcopy(ram_list)
+    return ram_list, heap_list
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
