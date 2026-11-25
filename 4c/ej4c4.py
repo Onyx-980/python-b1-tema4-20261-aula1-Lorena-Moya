@@ -56,30 +56,34 @@ Exemple:
 """
 # Write abstract class Animal here
 
-# Corret and overwrite class Dog(Animal) here 
-class Dog():
+from abc import ABC, abstractmethod
+
+# Interfície: obliga les classes filles a tenir el mètode talk
+class Animal(ABC):
     def __init__(self, name):
         self.name = name
 
-    def talk(self):
-        pass
-
-# Corret and overwrite class Cat(Animal) here 
-class Cat():
-    def __init__(self, name):
-        self.name = name
-    def talk(self):
-        pass
-
-# Corret and overwrite class Parrot(Animal) here 
-class Parrot():
-    def __init__(self, name):
-        self.name = name
+    @abstractmethod
     def talk(self):
         pass
 
 
+# Dog implementa la interfície Animal
+class Dog(Animal):
+    def talk(self):
+        return "¡Guau!"
 
+
+# Cat implementa la interfície Animal
+class Cat(Animal):
+    def talk(self):
+        return "¡Meow!"
+
+
+# Parrot implementa la interfície Animal
+class Parrot(Animal):
+    def talk(self):
+        return "¡Whistle!"
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
@@ -90,4 +94,4 @@ def test_code():
 	for animal in animals:
 	    print(f"{animal.name} dice {animal.talk()}")
 
-#test_code()
+# test_code()
