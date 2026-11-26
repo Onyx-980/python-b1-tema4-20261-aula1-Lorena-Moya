@@ -52,10 +52,22 @@ Exemple:
 """
 
 def read_and_write():
-    # Write here your code
-    pass
+    # creem la funció i sol·licitem l'entrada de dades per consola
+    name = input('Insert your name: ')
+    age = int(input('Insert your age: ')) 
+    # creem el fitxer de text i escrivim les línies d'informació  
+    with open('file.txt', 'w') as file:
+        file.write(f'{name}\n')
+        file.write(f'{age}\n')
+    # Obrim el fitxer i imprimim les línies
+    with open('file.txt', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            print(line.strip())
+    
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
+
 # read_and_write()
