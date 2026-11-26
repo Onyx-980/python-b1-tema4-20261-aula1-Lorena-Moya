@@ -37,11 +37,20 @@ Exemple:
 
 """
 def create_read_file():
-    # Write here your code
-    pass
+    # creem el fitxer de text i escrivim les línies d'informació
+    with open('text_file.txt', 'w') as file:
+        file.write('Joan\n')
+        file.write('Perez\n')
+        file.write('30\n') 
 
+    # llegim el fitxer i imprimim les línies
+    with open('text_file.txt', 'r') as file:
+        lines = file.readlines()
+        for line in lines:
+            print(line.strip())
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
-# Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# create_read_file()
+# Si vols provar el teu codi, descomenta les línies següents i executa l'script+
+
+# create_read_file() 
